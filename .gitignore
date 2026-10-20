@@ -12,3 +12,7 @@ vitest-results.json
 .zcode/
 .codebuddy/
 generated-images/
+# 本机桌面启动器、凭据说明和日志
+.desktop/
+使用说明.txt
+停止 LibreTV.command

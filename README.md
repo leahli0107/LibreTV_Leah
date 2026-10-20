@@ -1,3 +1,27 @@
+# LibreTV_Leah
+
+LibreTV_Leah 是基于 [LibreSpark/LibreTV](https://github.com/LibreSpark/LibreTV) 2.19.5 的个人定制版，沿用 AGPL-3.0-or-later 许可证。
+
+本版调整了首页、浏览器标题、安装名称和关于页面的显示名称。原项目的来源声明、许可证及数据格式保留。
+
+## 本地运行
+
+需要 Node.js 22。安装依赖后，复制 `.env.example` 为 `.env.local`，在本机填写 `PASSWORD`，再运行：
+
+```bash
+npm ci
+npm run build
+npm start -- --hostname 127.0.0.1
+```
+
+浏览器访问 `http://127.0.0.1:8080`。实际密码、桌面启动器和本机使用说明不会提交到仓库。
+
+`NEXT_PUBLIC_SITE_NAME` 用于更改网站名称，修改后需重新构建。点播源可在设置中添加，也可通过服务端 `DEFAULT_SOURCES` 或 `DEFAULT_SUBSCRIPTIONS` 预置。
+
+---
+
+以下保留上游项目说明。
+
 # LibreTV
 
 LibreTV Next.js 迁移版：免费在线视频聚合搜索与观看平台。基于 Next.js 15（App Router）+ TypeScript + Tailwind CSS，播放内核为 ArtPlayer + hls.js，支持亮暗双主题。
