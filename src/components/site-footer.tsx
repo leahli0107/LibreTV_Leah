@@ -1,5 +1,7 @@
 'use client';
 
+import { SITE_NAME } from '@/lib/site-config';
+
 import { useEffect, useState } from 'react';
 import { useAuth } from '@/components/auth';
 
@@ -92,6 +94,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-line py-4">
       <p className="text-center text-xs text-faint">
+        {SITE_NAME !== 'LibreTV' && <>{SITE_NAME}{' · 基于 '}</>}
         <a
           href="https://github.com/LibreSpark/LibreTV"
           target="_blank"
